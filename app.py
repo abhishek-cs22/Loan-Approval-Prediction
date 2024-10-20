@@ -2,6 +2,13 @@
 from flask import Flask, escape, request, render_template
 import pickle
 import numpy as np
+import streamlit as st
+
+def home():
+    st.title("Home Page")
+    st.write("This is a Streamlit app.")
+
+home()
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
